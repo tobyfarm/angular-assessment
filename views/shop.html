@@ -3,9 +3,13 @@
         <p>Shop Page</p>
     </div>
 </section>
-<div class="product-grid__item   grid__item one-half large--one-third" >
+
+<div class="product-grid__item   grid__item one-half large--one-third" ng-controller="shopCtrl" >
+
+
+  <product-tmpl ng-repeat="product in products track by $index" product="product" index="$index"></product-tmpl>
 
     <!--Repeat over your data and display it below -->
 
-    
+
 </div>

@@ -1,17 +1,20 @@
-angular.module("assessment", ['ui.router'])
+angular.module("app", ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
+  $urlRouterProvider
+  .otherwise('/')
+
   $stateProvider
     .state('home',{
       url:'/',
       templateUrl: "views/home.html"
     })
-    .state('blog',{
-      url:'/blog',
-      templateUrl: "views/blog.html"
-    })
     .state('about',{
       url:'/about',
       templateUrl: "views/about.html"
+    })
+    .state('blog',{
+      url:'/blog',
+      templateUrl: "views/blog.html"
     })
     .state('shop',{
       url:'/shop',
@@ -23,8 +26,7 @@ angular.module("assessment", ['ui.router'])
       controller: "productDetailsCtrl"
     })
 
-    $urlRouterProvider
-    .otherwise('/')
+
 
 
 
